@@ -1,0 +1,79 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+
+#bloc-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+   color: #4d030399;
+}
+
+input {
+    background-color: #4d030331;
+    border-radius: 10px;
+}
+input:hover {
+    cursor: pointer;
+}
+
+#start{
+  margin-top: 3rem;
+}
+.renduTitre {
+  /*position: relative;*/
+  margin-top: 5px;
+  text-align: center;
+  vertical-align: middle;
+  height: 25px;
+  color: white;
+  font-weight: bold;
+  border-radius: 10px;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(gray, blue);
+}
+.divTitre {
+    display: flex;
+    flex-direction: column;
+    align-item: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.renduDiv {
+   height: 450px;
+   width: 450px;
+   text-align: center;
+   background-color: #36DEE9;
+   margin: 1px auto;
+   border-radius: 10px;
+}
+.imgClass {
+    position: relative;
+    margin: 100px auto;
+}
+.leftBoard {
+    float: left;
+    position: absolute;
+    border-radius: 10px;
+    margin-top: -20px;
+    background-image: linear-gradient(blue,gray);
+    width: 20%;
+    height: 600px;
+}
+
+.rightBoard {
+    float: right;
+    position: absolute;
+    border-radius: 10px;
+    margin-top: -460px;
+    margin-left: 80%;
+    background-image: linear-gradient(blue, gray);
+    width: 20%;
+    height: 600px;
+}
