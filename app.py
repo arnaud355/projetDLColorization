@@ -51,7 +51,7 @@ def handleFileUpload():
     if 'photo' in request.files:
         photo = request.files['photo']
         if photo.filename != '':
-            photo.save(os.path.join('/Users/arnaud.baleh/Desktop/dataIA/projetFilRouge/E2/Flask_DLColorization/images_upload/', photo.filename))
+            photo.save(os.path.join('/Users/****/***/****/*****/E2/Flask_DLColorization/images_upload/', photo.filename))
     return redirect(url_for('accueil_page'))
 
 @app.route('/model/')
@@ -160,8 +160,8 @@ def model():
         image = (image * 255)
         return image.astype('uint8')
 
-    gray_scale = np.load('/Users/arnaud.baleh/Desktop/dataIA/projetFilRouge/E2/Flask_DLColorization/input/l/gray_scale.npy')[:299]
-    ab_scale = np.load('/Users/arnaud.baleh/Desktop/dataIA/projetFilRouge/E2/Flask_DLColorization/input/ab/ab/ab1.npy')[:300]
+    gray_scale = np.load('/Users/****/***/****/*****/E2/Flask_DLColorization/input/l/gray_scale.npy')[:299]
+    ab_scale = np.load('/Users/****/***/****/*****/E2/Flask_DLColorization/input/ab/ab/ab1.npy')[:300]
 
     def imgtoSizeNeeded(imgpath, size):
         img = Image.open(imgpath).convert('LA')
@@ -173,7 +173,7 @@ def model():
         return img
 
     imgs = []
-    path = "/Users/arnaud.baleh/Desktop/dataIA/projetFilRouge/E2/Flask_DLColorization/images_upload/"
+    path = "/Users/****/***/****/*****/E2/Flask_DLColorization/images_upload/"
     for f in os.listdir(path):
         imgs.append(f)
 
@@ -247,7 +247,7 @@ def model():
             l_val = unnormalize(samples[i])
             ab_val = unnormalize(a[i])
             rgb = rgb_image(l_val, ab_val)
-            matplotlib.image.imsave("/Users/arnaud.baleh/Desktop/dataIA/projetFilRouge/E2/Flask_DLColorization/static/result/img_"+str(i)+".png", rgb)
+            matplotlib.image.imsave("/Users/****/***/****/*****/E2/Flask_DLColorization/static/result/img_"+str(i)+".png", rgb)
         chrono_over = 1
 
 
@@ -257,7 +257,7 @@ def model():
 def view_picture():
     '''
     imgs = []
-    path = "/Users/arnaudbaleh/python-docs-hello-world/result/"
+    path = "/****/***/****/*****/python-docs-hello-world/result/"
     valid_images = [".jpg", ".gif", ".png", ".tga"]
     for f in os.listdir(path):
         ext = os.path.splitext(f)[1]
@@ -277,7 +277,7 @@ def view_picture():
     #return render_template('rendu.html',imgs=imgs)
 
     imgs = []
-    #path = "/Users/arnaudbaleh/python-docs-hello-world/static/result/"
+    #path = "/Users/****/***/****/*****/python-docs-hello-world/static/result/"
     path = 'static/result/'
     for f in os.listdir(path):
         imgs.append(f)
